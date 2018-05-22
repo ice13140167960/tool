@@ -39,12 +39,9 @@ object ExcelUtils {
      * @param maps 数据最好不要为null或者size为0,map的键值为excel的第一行标题
      * @return 成功或失败
      */
-    fun toExcel(filePath: String, maps: List<LinkedHashMap<String, String>>?): Boolean {
+    fun toExcel(filePath: String, maps: List<LinkedHashMap<String, String>>): Boolean {
         @Suppress("SENSELESS_COMPARISON")
-        if (filePath==null|| "" == filePath) {
-            return false
-        }
-        if (maps == null) {
+        if ("" == filePath) {
             return false
         }
         if (maps.isEmpty()) {
