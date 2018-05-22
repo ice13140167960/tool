@@ -8,7 +8,7 @@ import java.util.LinkedHashMap
 object ExcelUtils {
 
     /**
-     * 读取excel数据
+     * 读取excel数据xls
      * @param inputStream 文件流
      * @param startRowIndex 有用数据开始行数，从0开始
      */
