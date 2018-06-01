@@ -5,7 +5,7 @@ import java.lang.reflect.Field;
 public class BeanUtils {
 
     /**
-     * 复制新对象中有参数的字段到原有对象中
+     * 复制新对象中有不同于默认值的字段到原有对象中
      * @param object1 修改的对象
      * @param object2 参考的对象
      * @param <T> 泛型
