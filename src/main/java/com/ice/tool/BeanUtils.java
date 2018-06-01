@@ -18,8 +18,14 @@ public class BeanUtils {
             field.setAccessible(true);//暴力反射，解除私有限定
             Object defaultStr=field.get(obj);
             Object object2Str=field.get(object2);
-            if(!defaultStr.equals(object2Str)){
-                field.set(object1,object2Str);
+            if(defaultStr==null){
+                if(object2Str!=null){
+                    field.set(object1,object2Str);
+                }
+            } else{
+                if(!defaultStr.equals(object2Str)){
+                    field.set(object1,object2Str);
+                }
             }
         }
     }
